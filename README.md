@@ -5,7 +5,7 @@ This was the last version of Sigil to have Book View.  Old binaries can still be
 
 One slight change was required as detailed in [changes.md](https://github.com/ThePillenwerfer/Old-Sigil/blob/main/changes.md)
 
-Under **Releases** are two `.deb` packages.  Download both and install [`sigil-data_0.9.13+dfsg-1_all.deb`](https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil-data_0.9.13+dfsg-1_all.deb) before [`sigil_0.9.13+dfsg-1_amd64.deb`](https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil-0.9.13+dfsg-1_amd64.deb).  If you wish to switch to this version from a newer one that newer one needs to be removed first.  It may be possible to have both but if so I don't know, or care, how.
+Under **Releases** are two `.deb` packages.  Download both and install [`sigil-data_0.9.13+dfsg-1_all.deb`](https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil-data_0.9.13+dfsg-1_all.deb) before [`sigil_0.9.13+dfsg-1_amd64.deb`]([https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil-0.9.13+dfsg-1_amd64.deb](https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil_0.9.13+dfsg-1_amd64.deb)).  If you wish to switch to this version from a newer one that newer one needs to be removed first.  It may be possible to have both but if so I don't know, or care, how.
 
 # Disclaimer
 I did this for my own use but am happy to share it with anybody else on the basis that it may not work.  In theory it should work on other Debian-based Linuxes such as Ubuntu but this hasn't been tested.  It should be further noted that it is in no way endorsed by or connected to the people behind Sigil, Debian or anything else.
@@ -13,7 +13,7 @@ I did this for my own use but am happy to share it with anybody else on the basi
 # Building
 If the supplied debs don't work or you wish to build it yourself for some other reason this is what worked for me.
 
-Download [`sigil-0.9.13_source.tar.gz`](https://github.com/ThePillenwerfer/Old-Sigil/blob/main/sigil-0.9.13_source.tar.gz) from this repository and extract the files to a directory.
+Download `sigil-0.9.13_source.tar.gz` from this repository and extract the files to a directory.
 
 Install Sigil's build dependencies and the things you need to build anything with:—
 
