@@ -19,7 +19,7 @@ Install Sigil's build dependencies and the things you need to build anything wit
 
 `sudo apt install build-essential fakeroot devscripts cmake debhelper-compat dh-python libhunspell-dev libjs-jquery libjs-jquery-scrollto libminizip-dev libpcre3-dev libqt5svg5-dev libqt5webkit5-dev libqt5xmlpatterns5-dev pkg-config python3-dev qtbase5-dev qttools5-dev qttools5-dev-tools zlib1g-dev`
 
-Note: `sudo apt build-dep sigil` installs dependencies for current version and misses some that this version needs.
+Note: `sudo apt build-dep sigil` installs dependencies for **current** version and misses some that this version needs.
 
 `cd` into the directory you put the source files in and run:—
 
