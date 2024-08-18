@@ -1,0 +1,11 @@
+The upstream tarball of Sigil included a lot of boundled code copies.
+There are also a couple of minified javascripts (jquery and jquery.scrollto),
+given that these two are not dfsg-compliant, I chose to repack the tarball
+removing also the boundled libraries to reduce the tarball size and be sure
+Sigil uses the system libraries.
+
+Some notes about library that couldn't be removed:
+* tidylib: there are sigil-specific changes (see CmakeLists.txt:71), so it
+           cannot be removed.
+
+See debian/copyright for an updated list of removed files

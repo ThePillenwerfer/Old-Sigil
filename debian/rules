@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND := -Wl,--as-needed
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_configure:
+	ln -svf /usr/share/javascript/jquery/jquery.min.js $(CURDIR)/src/Resource_Files/javascript/jquery-2.2.4.min.js
+	ln -svf /usr/share/javascript/jquery-scrollto/jquery.scrollTo.min.js $(CURDIR)/src/Resource_Files/javascript/jquery.scrollTo-2.1.2-min.js
+	dh_auto_configure -- \
+		-DUSE_SYSTEM_LIBS=1 \
+		-DSYSTEM_LIBS_REQUIRED=1 \
+		-DINSTALL_BUNDLED_DICTS=0 \
+		-DMATHJAX_DIR=/usr/share/javascript/mathjax/ \
+
+override_dh_install:
+	rm -v $(CURDIR)/debian/tmp/usr/share/sigil/plugin_launchers/python/sigil_bs4/COPYING.txt
+	rm -v $(CURDIR)/debian/tmp/usr/share/sigil/plugin_launchers/python/css_parser/COPYING
+	rm -v $(CURDIR)/debian/tmp/usr/share/sigil/plugin_launchers/python/css_parser/COPYING.LESSER
+	rm -v $(CURDIR)/debian/tmp/usr/share/sigil/plugin_launchers/python/css_parser/README.md
+	dh_install
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+override_dh_python3:
+	dh_python3 --no-ext-rename

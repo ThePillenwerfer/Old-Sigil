@@ -1,0 +1,259 @@
+sigil (0.9.13+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.9.13+dfsg.
+  * d/copyright:
+    + Update the Files-Excluded pattern.
+    + Update.
+  * Sigil now has native support for system-wide mathjx, leverage it,
+    and drop the local patch.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Thu, 21 Mar 2019 13:02:08 +0100
+
+sigil (0.9.12+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.9.12+dfsg.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Tue, 19 Feb 2019 13:50:47 +0100
+
+sigil (0.9.11+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.9.11+dfsg.
+  * d/copyright: Update.
+  * d/rules: remove extra copyright/readme files from the installed package.
+  * d/control
+    + Bump Standards-Version to 4.3.0, no changes needed.
+    + Bump debhelper compat level to 12, using the new debhelper-compat.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Sat, 16 Feb 2019 20:55:49 +0100
+
+sigil (0.9.10+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.9.10+dfsg.
+  * d/control:
+    + Remove Norbert Preining from Uploaders as per his own request.
+      Thank you for your previous work on Sigil packaging!
+    + Bump Standards-Version 4.1.5, no changes needed.
+  * d/watch: include gpg signature check.
+  * d/copyright:
+    + Update.
+    + Use HTTPS in the Format field.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Sun, 29 Jul 2018 19:22:22 +0200
+
+sigil (0.9.9+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.9.9+dfsg.
+    https://sigil-ebook.com/2017/12/22/sigil-0-9-9-released
+  * d/copyright: update.
+  * d/watch: change matching pattern to match the new tarball.
+  * d/upstream/signing-key.asc: Add the upstream signing key.
+  * Bump debhelper compat level to 11.
+  * d/control:
+    + Move Vcs-* to salsa.debian.org.
+    + Bump Standards-Version to 4.1.2:
+      - Replace Priority:extra (deprecated) with optional.
+    + Set Rules-Requires-Root: no.
+    + Remove dependency on ${shlibs:Depends} from sigil-data.
+    + Drop Recommends on Python 2, to help with deprecating it.
+  * d/rules:
+    + Use dh_missing --fail-missing instead of dh_install --fail-missing.
+    + Remove the get-orig-source target, that was just calling uscan.
+    + Make some command more verbose.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Tue, 26 Dec 2017 19:27:42 +0100
+
+sigil (0.9.8+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Wed, 14 Jun 2017 16:23:26 +0200
+
+sigil (0.9.8+dfsg-1) experimental; urgency=medium
+
+  * New upstream version 0.9.8+dfsg.
+  * Update copyright years.
+  * Add reccomends on python3-pyqt5.
+    Upstream suggests plugin writers to use it to write the UI.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Wed, 22 Mar 2017 10:40:14 +0100
+
+sigil (0.9.7+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.9.7+dfsg:
+    + d/copyright: update Files-Exclude field.
+    + update jquery and jquery.scrollto symlinks.
+    + d/patches/hunspell: drop, already upstream.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Sun, 30 Oct 2016 14:49:18 +0000
+
+sigil (0.9.6+dfsg-3) unstable; urgency=medium
+
+  * d/control: add "Multi-Arch: foreign" marker to sigil-data.
+  * Bump debhelper compat level to 10.
+    + Drop explicit --parallel option, now default.
+  * Remove the 'reproducible' patch.
+    GCC produces deterministic __DATE__ and __TIME__ following
+    SOURCE_DATE_EPOCH, so removing them is not strictly needed anymore.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Mon, 17 Oct 2016 18:06:13 +0000
+
+sigil (0.9.6+dfsg-2) unstable; urgency=medium
+
+  * Drop the patch setting the SIGIL_DICTIONARY env variable in the launcher
+    script, and instead backport two paches from git that specify hunspell
+    dictionaries paths at build time (with /usr/share/hunspell being default
+    and hardcoded).
+
+ -- Mattia Rizzolo <mattia@debian.org>  Thu, 04 Aug 2016 17:31:49 +0000
+
+sigil (0.9.6+dfsg-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.9.6+dfsg.
+  * d/watch: fix dversionmangle to correctly mangle dfsg versions with a number.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Sun, 19 Jun 2016 09:21:32 +0000
+
+sigil (0.9.5+dfsg1-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.9.5+dfsg1
+    + remove embedded, minified MathJax.
+  * Add patch to use system MathJax instead of the bundled one.  Thanks to
+    Dmitry Shachnev <mitya57@debian.org> for the help with the configuration!
+  * debian/control:
+    + stop recommending a specific python3 version.  Closes: #812602
+    + use https in Vcs-Git.
+    + bump Standards-Version to 3.9.8, no changes needed.
+    + add dependency on libjs-mathjax.
+  * debian/copyright:
+    + update years.
+    + add mathjax files to Files-Excluded.
+  * debian/watch: use the tarball manually uploaded by upstream.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Mon, 13 Jun 2016 16:36:41 +0000
+
+sigil (0.9.2+dfsg+dfsg-2) unstable; urgency=medium
+
+  * [2c7b008] debian/clean: files moved, so update the list of files to remove.
+  * [adca4b7] Use dh_python3 to compute python dependencies, etc.
+  * debian/control:
+    + [9bd47bb] Recommends some python3 modules used by the test plugin.
+    + [b4ef59b] Build using the default python version.  Closes: #810872
+
+ -- Mattia Rizzolo <mattia@debian.org>  Tue, 19 Jan 2016 13:45:43 +0000
+
+sigil (0.9.2+dfsg+dfsg-1) unstable; urgency=medium
+
+  * [19a5e34] debian/{control,copyright}: use my @debian.org email address
+  * [4b7b293] Imported Upstream version 0.9.2+dfsg+dfsg
+    + [f0192e8] debian/patches/switch-to-QTemporaryDir: remove.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Sat, 19 Dec 2015 09:12:32 +0000
+
+sigil (0.9.1+dfsg-2) unstable; urgency=medium
+
+  * [5c55628] debian/patches/switch-to-QTemporaryDir: take commit from upstream
+    to have a race-free, privacy-ok temporary directory implementation.
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Thu, 03 Dec 2015 16:28:47 +0000
+
+sigil (0.9.1+dfsg-1) unstable; urgency=medium
+
+  * [5fab6a8] Imported Upstream version 0.9.1+dfsg.
+  * [9d62545] d/patches/{multiarch,reproducible-build}: drop, applied upstream.
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Sun, 29 Nov 2015 18:19:43 +0000
+
+sigil (0.9.0+dfsg-3) unstable; urgency=medium
+
+  * [1433219] debian/control: remove a bunch of Build-Dependencies not needed
+    anymore.  Thanks to KevinH (upstream developer) for noticing.
+  * [d527ac3] debian/patches/multiarch: mark the patch as forwarded.
+  * [155dae8] debian/patches/reproducible-build: apply patch to get sigil build
+    reproducibly.  The order of the linking was dependent on readdir() order,
+    so sort the list of sources before everything.  Thanks to
+    Reiner Herrmann <reiner@reiner-h.de> for the patch.  Closes: #805500
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Thu, 19 Nov 2015 00:23:52 +0000
+
+sigil (0.9.0+dfsg-2) unstable; urgency=medium
+
+  * [7ecedd6] debian/patch/multarch: allow finding the python lib everywhere,
+    fix FTBFS on !amd64 and !i386.
+  * [b70e6d7] debian/control: Let sigil depend on libhunspell-dev.
+    The plugin system looks for libhunspell.so directly, so we need the symlink
+    provided by this.  Closes: #804887
+  * [5bf179b] debian/rules: fix extra-license-file lintian warning.
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Mon, 16 Nov 2015 15:45:20 +0000
+
+sigil (0.9.0+dfsg-1) unstable; urgency=medium
+
+  * [f98b278] Imported Upstream version 0.9.0+dfsg.
+  * debian/rules:
+    + [1c5a574] the bundled jquery-scrollto moved, update the `ln -s` paths.
+    + [eb71fb7] force use of system libs (-DSYSTEM_LIBS_REQUIRED=1).
+    + [2878b60] link with --as-needed to avoid over-linking.
+    + [dcf912c] set -DINSTALL_BUNDLED_DICTS=0.
+  * debian/patches:
+    * [b2ca7e0] remove not needed anymore patches.
+    * [3be2b5b] refresh.
+  * debian/control:
+    + [c53608d] build-depend on python3.4-dev (yes, I really need to hardcode
+      this python version).
+    + [909d06d] let sigil depend on python3-lxml (used by the plugin launcher).
+    + [35dcfc8] let sigil recommend python2.7 and python3.4, which are used by
+      external plugins.  We can't use a simple python/python3 since upstream
+      supports only those 2 versions, and plugins explitely list them.
+  * [e1d147d] sigil does not support SIGIL_TRANSLATION anymore, so remove the
+    relative patch and citation in the manpage.
+  * debian/copyright:
+    + [084da83] update Files-Excluded for the new tarball.
+    + [ca93bf3,d640e1e] update copyright after the new upstream release.
+  * [7f5b6ab] debian/sigil.install: install the whole usr/lib directory.
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Tue, 10 Nov 2015 09:12:53 +0000
+
+sigil (0.8.7+dfsg-3) unstable; urgency=medium
+
+  * debian/control: set Priority: extra since 2 of its deps are so
+  * debian/patches/translations: add to get sigil using its own translation
+    files.  Closes: #798764
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Thu, 24 Sep 2015 09:13:31 +0000
+
+sigil (0.8.7+dfsg-2) unstable; urgency=medium
+
+  * debian/clean: remove the two jquery minified js (if they are present, they
+    are symlink created in a past build)
+  * debian/sigil.1: document the SIGIL_DICTIONARIES and SIGIL_TRANSLATIONS
+    environment variables.  Closes: #794067
+  * debian/patches:
+    + reproducible: add to make the build reproducible: this just removes the
+      "Build time" label from the about window.
+    + FTBFS_kfreebsdd: add to fix FTBFS in kfreebsd
+    + dictionaries: add to change the default dictionaries path to
+      /usr/share/hunspell (provided by hunspell-dictionaries)
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Tue, 01 Sep 2015 19:13:58 +0000
+
+sigil (0.8.7+dfsg-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream releases 0.8.7.
+  * debian/watch: move to the new github project.
+  * debian/copyright: update the upstream source location.
+  * debian/rules: stop removing pcre, since the tarball actually miss it.
+
+  [ Mattia Rizzolo ]
+  * debian/control: update Homepage field to the new site.
+  * debian/rules: do not fail the configure step if run twice.
+  * debian/copyright: remove pcre files from the copyright, they are not on
+    the tarball anymore.
+
+ -- Norbert Preining <preining@debian.org>  Wed, 29 Jul 2015 21:07:25 +0900
+
+sigil (0.8.4+dfsg-1) experimental; urgency=low
+
+  * Initial packaging of Sigil (Closes: #590180)
+
+ -- Mattia Rizzolo <mattia@mapreri.org>  Sun, 15 Feb 2015 15:02:32 +0100

@@ -1,0 +1,254 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Sigil
+Upstream-Contact: Strahinja.Markovic@gmail.com, john@nachtimwald.com
+Source: https://github.com/Sigil-Ebook/Sigil
+Files-Excluded:
+ 3rdparty/hunspell
+ 3rdparty/minizip
+ 3rdparty/pcre
+ 3rdparty/zlib
+ src/Resource_Files/dictionaries
+ src/Resource_Files/javascript/jquery-*
+ src/Resource_Files/javascript/jquery.scrollTo-*
+ src/Resource_Files/polyfills/MathJax_License.txt
+ src/Resource_Files/polyfills/MathJax_README.md
+ src/Resource_Files/polyfills/ML.zip
+
+Files: *
+Copyright: 2009-2011 Strahinja Markovic <strahinja.markovic@gmail.com>
+           2012 Daniel Pavel <daniel.pavel@gmail.com>
+           2012-2013 Dave Heiland <duane_moody@yahoo.com>
+           2012 Grant Drake <grant.drake@gmail.com>
+           2012-2015 John Schember <john@nachtimwald.cm>
+           20014-2019 Kevin Hendricks
+License: GPL-3+
+
+Files: debian/*
+Copyright: 2014 Norbert Preining <preining@debian.org>
+           2014-2019 Mattia Rizzolo <mattia@debian.org>
+License: GPL-3+
+
+Files: cmake_extras/*
+Copyright: 2003-2009 Kitware, Inc.
+           2007 Simon Edwards <simon@simonzone.com>
+           2009 Will Dicharry <wdicharry@stellarscience.com>
+           2010 Alexander Neundorf <neundorf@kde.org>
+           2011 Bjoern Ricks <bjoern.ricks@gmail.com>
+           2012 Rolf Eike Beer <eike@sf-mail.de>
+License: BSD-3-clause
+
+Files: internal/gumbo/*
+Copyright: 2010-2011 Google Inc.
+           2015-2016 Kevin B. Hendricks, Stratford Ontario
+License: Apache-2.0
+
+Files: src/Misc/QCodePage437Codec.cpp
+       src/Misc/QCodePage437Codec.h
+Copyright: 2000-2007 TROLLTECH ASA
+License: GPL-2
+
+Files: src/Misc/WrapIndicator.h
+       src/ViewEditors/Searchable.cpp
+Copyright: 2012 Nokia Corporation <qt-info@nokia.com>
+License: LGPL-2.1
+
+Files: src/Misc/CaseInsensitiveItem.h
+Copyright: 2013 Dave Heiland <duane_moody@yahoo.com>
+           Nokia Corporation <qt-info@nokia.com>
+License: LGPL-2.1
+
+Files: src/Misc/PyObjectPtr.cpp
+       src/Misc/PyObjectPtr.h
+Copyright: 2010 MeVis Medical Solutions AG
+           2015 Kevin Hendricks
+License: LGPL-2.1
+
+Files: src/Resource_Files/plugin_launchers/python/*
+Copyright: 2014 Kevin Hendricks
+           2014 John Schember <john@nachtimwald.com>
+           2014 Doug Massay
+License: BSD-2-clause
+
+Files: src/Resource_Files/plugin_launchers/python/sigil_bs4/*
+Copyright: 2004-2015 Leonard Richardson
+License: Expat
+
+Files: src/Resource_Files/plugin_launchers/python/sigil_gumbo_bs4_adapter.py
+Copyright: 2012 Google Inc.
+License: Apache-2.0
+
+Files: src/Resource_Files/plugin_launchers/python/sigil_gumboc.py
+Copyright: 2015 Kevin Hendricks
+           2012 Google Inc.
+License: Apache-2.0
+
+Files: src/Resource_Files/dtd/xhtml-entities.dtd
+Copyright: 1998-2002 World Wide Web Consortium
+           Portions (C) International Organization for Standardization
+License: W3C
+
+Files: src/Resource_Files/plugin_launchers/python/css_parser/*
+Copyright: 2004-2013 Christof Hoeke
+License: LGPL-3+
+
+Files: src/Resource_Files/polyfills/SIGIL_EBOOK_MML_SVG.js
+Copyright: 2010-2018 The MathJax Consortium
+License: Apache-2.0
+
+Files: src/Resource_Files/python3lib/cssreformatter.py
+Copyright: 2016 Francesco Martini
+License: GPL-3+
+
+License: Apache-2.0
+ On Debian systems the 'Apache License' version 2.0 is located in
+ '/usr/share/common-licenses/Apache-2.0'.
+
+License: W3C
+ This software and documentation is provided "as is," and
+ the copyright holders and contributing author(s) make no
+ representations or warranties, express or implied, including
+ but not limited to, warranties of merchantability or fitness
+ for any particular purpose or that the use of the software or
+ documentation will not infringe any third party patents,
+ copyrights, trademarks or other rights.
+ .
+ The copyright holders and contributing author(s) will not be held
+ liable for any direct, indirect, special or consequential damages
+ arising out of any use of the software or documentation, even if
+ advised of the possibility of such damage.
+ .
+ Permission is hereby granted to use, copy, modify, and distribute
+ this source code, or portions hereof, documentation and executables,
+ for any purpose, without fee, subject to the following restrictions:
+ .
+ 1. The origin of this source code must not be misrepresented.
+ 2. Altered versions must be plainly marked as such and must
+    not be misrepresented as being the original source.
+ 3. This Copyright notice may not be removed or altered from any
+    source or altered source distribution.
+ .
+ The copyright holders and contributing author(s) specifically
+ permit, without fee, and encourage the use of this source code
+ as a component for supporting the Hypertext Markup Language in
+ commercial products. If you use this source code in a product,
+ acknowledgment is not required but would be appreciated.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ On Debian systems, the complete text of version 3 of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-3'.
+
+License: GPL-2
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation;
+ version 2 dated June 1991.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+    1. Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT OWNER OR CONTRIBUTORS ``AS IS''
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER(S) OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+    1. Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+    3. Neither the name of Power of Two Games LLC nor the
+       names of its contributors may be used to endorse or promote products
+       derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS''
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: LGPL-2.1
+ This file may be used under the terms of the GNU Lesser General Public
+ License version 2.1 as published by the Free Software Foundation and
+ appearing in the file LICENSE.LGPL included in the packaging of this file.
+ Please review the following information to ensure the GNU Lesser General
+ Public License version 2.1 requirements will be met:
+ http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License version 2.1 can be found in ‘/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+ .
+ On Debian systems, you can read the full text of the GNU Lesser General Public
+ License in ‘/usr/share/common-licenses/LGPL-3’.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

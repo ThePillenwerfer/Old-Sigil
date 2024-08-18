@@ -1,0 +1,3 @@
+# These are examples provided internally by the program, not thought to be
+# pushed to the user in a public location (they are installed elsewhere)
+package-does-not-install-examples src/Resource_Files/examples/
