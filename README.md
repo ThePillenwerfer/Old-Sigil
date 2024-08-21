@@ -7,6 +7,8 @@ One slight change was required as detailed in [changes.md](https://github.com/Th
 
 Under **Releases** are three `.deb` packages.  Download [`sigil-data_bookworm_all.deb`](https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil-data_0.9.13_bookworm_all.deb) and install it before either [`sigil_0.9.13_bookworm_amd64.deb`](https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil_0.9.13_bookworm_amd64.deb) for 64-bit — which is most likely what a modern system will need — or [`sigil_0.9.13_bookworm_i386.deb`](https://github.com/ThePillenwerfer/Old-Sigil/releases/download/0.9.13/sigil_0.9.13_bookworm_i386.deb) if you want 32-bit.  If you wish to switch to this version from a newer one that newer one needs to be removed first.  It may be possible to have both but if so I don't know, or care, how.
 
+It throws errors on loading a file but still seems to work.  Hopefully somebody who knows more than me will fork this repository and fix it.
+
 An alternative strategy would be to download the [Windows version](https://github.com/Sigil-Ebook/Sigil/releases/download/0.9.13/Sigil-0.9.13-Windows-Setup.exe) and install and run it using WINE.
 
 # Disclaimer
@@ -15,7 +17,7 @@ I did this for my own use but am happy to share it with anybody else on the basi
 # Building
 If the supplied debs don't work or you wish to build it yourself for some other reason this is what worked for me.
 
-Download or clone this repository and extract the files to a directory.
+Download or clone this repository and extract the files to a directory called `sigil_0.9.13+dfsg-1`.
 
 Install Sigil's build dependencies and the things you need to build anything with:—
 
@@ -23,7 +25,7 @@ Install Sigil's build dependencies and the things you need to build anything wit
 
 Note: `sudo apt build-dep sigil` installs dependencies for the **current** version and misses some that this version needs.
 
-`cd` into the directory you put the source files in and run:—
+`cd` into `sigil_0.9.13+dfsg-1/src` and run:—
 
 `debuild -b -uc -us`
 
